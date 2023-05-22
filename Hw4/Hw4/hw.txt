@@ -1,0 +1,54 @@
+2. When using insert, it uses == operator. 
+As Map<Coord, int> has a user defined class Coord as its key type, it needs operator overload in order to use ==.
+
+3e. When use of push_back, the capacity of the vector changes, reallocating the location in heap, causing error for the pointers.
+
+4b. If there were only one parameter, the function won't be able to tell whether it is a recursive call, making it unable to print the full path.
+
+5a. The time complexity is O(N^3) since there are 3 nested for loops, running from 0 to N, and the function inside the for loop has constant time complexity.
+
+5b. The time complexity is still O(N^3) as i still goes to N. Constant multiple does not affect time complexity.
+
+6a.
+void reassign(const Map& m, Map& result)
+{
+    Map res;------------------------------------------O(1)
+
+    if (!m.empty())-----------------------------------O(1)
+    {
+        KeyType prevKey;------------------------------O(1)
+        ValueType value0;-----------------------------O(1)
+
+        m.get(0, prevKey, value0);--------------------O(N/2)
+
+        for (int i = 1; i < m.size(); i++)------------O(N)
+        {
+            KeyType k;--------------------------------O(1)
+            ValueType v;------------------------------O(1)
+            m.get(i, k, v);---------------------------O(N/2)
+            res.insert(prevKey, v);-------------------O(N/2)
+            prevKey = k;------------------------------O(1)
+        }
+
+        res.insert(prevKey, value0);------------------O(N/2)
+    }
+
+    result.swap(res);---------------------------------O(1)
+}
+N*N + N = N^2 + N
+Answer : O(N^2)
+
+6b.
+void Map::reassign()
+{
+    Node* p = m_head->m_next;--------------------------O(1)
+    if (p != m_head)-----------------------------------O(1)
+    {
+        ValueType value0 = p->m_value;-----------------O(1)
+	for ( ; p->m_next != m_head; p = p->m_next)--------O(N)
+	    p->m_value = p->m_next->m_value;---------------O(1)
+        p->m_value = value0;---------------------------O(1)
+    }
+}
+
+Answer: O(N)

@@ -1,0 +1,5 @@
+﻿  sorts.cpp
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Hw4\Hw4\sorts.cpp(134,37): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Hw4\Hw4\sorts.cpp(267,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Hw4\Hw4\sorts.cpp(279,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Hw4.vcxproj -> C:\Users\krwhlee\Desktop\School\UCLA\CS32\Hw4\Debug\Hw4.exe

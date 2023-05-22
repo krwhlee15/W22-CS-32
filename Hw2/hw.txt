@@ -1,0 +1,35 @@
+Wonhee Lee
+905284414
+HW #2
+
+2.
+(4,6)
+(3,6)
+(5,6)
+(5,7)
+(5,8)
+(6,8)
+(7,8)
+(8,8)
+(8,7)
+(6,6)
+(4,5)
+(4,4)
+
+4.
+(4,6)
+(4,5)
+(5,6)
+(3,6)
+(4,4)
+(6,6)
+(5,7)
+(4,3)
+(5,4)
+(5,8)
+(4,2)
+(6,4)
+
+The difference of two algorithms is the order of evaluating the path of the position.
+As stack is LIFO(Last In First Out) while queue is FIFO(First In First Out),
+the order of the way both algorithm go through the maze is completely different.

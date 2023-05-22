@@ -1,0 +1,144 @@
+Hierarchy
+
+GraphObject
+	Actor
+		Peach
+		Obstacle
+			Block
+			Pipe
+		LevelEnder
+		Goodie
+			Flower
+			Mushroom
+			Star
+		Projectile
+			PiranhaFireball
+			PeachFireball
+			Shell
+		Enemy
+			Goomba
+			Koopa
+			Piranha
+
+1)
+Actor: 
+virtual void doSomething() = 0;
+	It does nothing. Just provides other actors to do their stuff.
+
+virtual bool blocksMovement() = 0;
+	It does nothing. It is to set actor's behavior of blocking movement.
+	
+bool collidedWithEnemy();
+bool collidedWithBlock();
+bool collidedWithPeach();
+	These are to check if the actor collided with certain type of actor.
+
+virtual bool isEnemy() { return false; };
+virtual bool isKoopa() { return false; };
+virtual bool blocksMove() { return false; };
+	These are to check the type of actor. 
+	For koopa, I made a separated function to use it for shell generation.
+	
+virtual void moveTo(double x, double y, Actor* me);
+	This function is to use GraphObject::moveTo in the way I want.
+	It checks if it is valid move before it actually moves.
+	
+virtual void whenDead() {};
+virtual void bonked() {};
+	These are functions to perform certain action in certain situation.
+	
+Peach:
+doSomething();
+	It determines Peach's movement and determines what to do based on the key input.
+
+virtual void shootFire();
+	It shoots fire based on the fireDelay of Peach. It is virtual since Piranha also has shootFire().
+void jump();
+	Jumps based on remaining jump tick.
+void bonk(int i);
+	Action if it bonked a block as it moves to certain direction.
+
+void incHealth() { m_health++; if (m_health = 3) { m_health--; } };
+void decHealth() { m_health--; };
+int getHealth() { return m_health; };
+	Manages hit point of Peach.
+	
+void setStar(bool y) { starPower = y; };
+void setFlower(bool y) { shootPower = y; };
+void setMushroom(bool y) { jumpPower = y; };
+bool currShootPower() { return shootPower; };
+bool currStarPower() { return starPower; };
+bool currJumpPower() { return jumpPower; };
+void setStarTick(int st) { star_tick = st; };
+	Manages power of peach.
+	
+Obstacle:
+virtual void doSomething() {};
+	Does nothing as it is just wall.
+virtual bool blocksMove() { return true; };
+	Obstacle blocks movement.
+	Block:
+	virtual void doSomething();
+		Does nothing.
+	virtual void bonked();
+		behavior when it is bonked.
+	void setType(int t) { type = t; };
+		As block should release goodie, block has its type based on what item it holds.
+		This manages the type of the block
+	Pipe:
+	vitual void doSomething();
+		Does nothing.
+LevelEnder:
+virtual void doSomething();
+	Based on the type of levelender(Mario or Flag),
+	it playsSound and sets whether it completes the level or ends the game.
+Goodie:
+virtual void doSomething();
+	Sets the way of goodie's movement. 
+	Flower:
+	Mushroom:
+	Star:
+	virtual void doSomething();
+		For each goodie, it give peach a corresponding power if collided with peach.
+Projectile:
+virtual void doSomething();
+	sets behavior of projectile's movement.
+	If collided with enemy, it kills the enemy and increases the score.
+	If collided with block or enemy, it disappears.
+	PiranhaFireball:
+	virtual void doSomething();
+		behaves quite similar with the base projectile doSomething(),
+		but instead of checking if it is collided with enemy,
+		it checks whether it is collided with peach.
+	PeachFireball:
+	Shell:
+		These two behaves just like regular projectile.
+Enemy:
+virtual void doSomething();
+	Sets behavior of enemy's movement. Changes direction if blocked by obstacle.
+	Goomba:
+		behaves like the base enemy doSomething()
+	Koopa:
+	virtual void doSomething() { Enemy::doSomething(); };
+	virtual bool isKoopa() { return true; };
+		This function is to check whether the enemy is Koopa or not.
+		This one returns true, as it is Koopa.
+	void whenDead();
+		function of behavior when Koopa is dead.
+		Adds shell int the direction and position when Koopa died.
+	Piranha:
+	virtual void doSomething();
+		When peach is in range of fire and fireDelay is 0, it shoots fire.
+	virtual void shootFire();
+		Adds fire in the direction and position of Piranha.
+	bool withinRange(Actor* a);
+		checks whether peach is within the fire range.
+
+2) All functions implemented.
+
+3) When displaying score, the empty spaces were filled with 0s in the solution, but it was not specified in the spec.
+	So followed the solution for displaying the score. Also the spec only specified the situation when the block is bonked when peach jumped to the block,
+	but in the solution, the block released the goodie when it is also bonked from the side. So I managed to make the game that way.
+	I kept compared my game with the solution, so I might have applied more features that are not specified in the spec but just in the game.
+	
+	

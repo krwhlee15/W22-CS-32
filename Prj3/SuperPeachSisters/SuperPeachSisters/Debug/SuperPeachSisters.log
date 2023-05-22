@@ -1,0 +1,14 @@
+﻿  Actor.cpp
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.h(12,63): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.h(12,39): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.cpp(227,73): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.cpp(227,34): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.cpp(231,71): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.cpp(231,32): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.cpp(235,69): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.cpp(235,30): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.cpp(489,45): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.cpp(489,26): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.cpp(516,55): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\SuperPeachSisters\Actor.cpp(516,36): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SuperPeachSisters.vcxproj -> C:\Users\krwhlee\Desktop\School\UCLA\CS32\Prj3\SuperPeachSisters\Debug\SuperPeachSisters.exe

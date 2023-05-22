@@ -1,0 +1,7 @@
+-Was able to finish
+-did not use banned STL componenets
+-I believe I fixed all the bugs so far
+-I implemented the whole code first but radixTree, than I started debugging.
+I first used map from stl before I actually implement RadixTree.
+I tried using datas from members.txt, and some random datas to see if it gives correct output that it is not valid.
+As the output seems to be correct, I implemented RadixTree trying to implement map of my own.
